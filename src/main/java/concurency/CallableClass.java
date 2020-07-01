@@ -3,7 +3,7 @@ package concurency;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-public class CallableClass implements Callable<Integer> {
+public class CallableClass implements Callable<Long> {
     private int start;
     private int end;
     private final List<Integer> list;
@@ -15,8 +15,8 @@ public class CallableClass implements Callable<Integer> {
     }
 
     @Override
-    public Integer call() throws Exception {
-        int sum = 0;
+    public Long call() throws Exception {
+        long sum = 0;
         for (; start < end; start++) {
             sum += list.get(start);
         }
