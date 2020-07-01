@@ -30,6 +30,7 @@ public class Main {
         List<Future<Long>> futures = executorService.invokeAll(List.of(callList1, callList2,
                 callList3, callList4, callList5));
         long endCallable = System.currentTimeMillis();
+        executorService.shutdownNow();
 
         long sumCallable = futures.stream()
                 .mapToLong(f -> {
