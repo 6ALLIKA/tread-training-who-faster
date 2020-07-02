@@ -24,7 +24,7 @@ public class ConccurencyMain {
 
         for (int i = 0; i < 5; i++) {
             callableList.add(new CallableClass(PART_OF_LIST * i,
-                    PART_OF_LIST * (i +1), list));
+                    PART_OF_LIST * (i + 1), list));
         }
         ExecutorService executorService = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
