@@ -19,9 +19,9 @@ public class ForkClass extends RecursiveTask<Long> {
                     .stream()
                     .mapToLong(ForkJoinTask::join)
                     .sum();
-        } else {
-            return processing(list);
         }
+
+        return processing(list);
     }
 
     private List<ForkClass> createSubTasks() {
