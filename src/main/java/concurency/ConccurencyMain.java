@@ -2,7 +2,7 @@ package concurency;
 
 public class ConccurencyMain {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         ListService listService = new ListService(1_000_000);
 
         long startCallable = System.currentTimeMillis();
